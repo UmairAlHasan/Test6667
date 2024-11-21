@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-menu {
+    position: relative;
+}
+
+#profile-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #2c2c2c;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.dropdown-item:hover {
+    background: #3e3e3e;
+    border-radius: 5px;
+}
