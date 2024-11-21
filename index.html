@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="videoPlayer" controls preload="auto">
+            <source src="video-720p.mp4" type="video/mp4">
+            <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+            <track src="subtitles-fr.vtt" kind="subtitles" srclang="fr" label="French">
+        </video>
+
+        <div class="custom-controls" role="group" aria-label="Video Player Controls">
+            <button id="playPause" tabindex="0">Play/Pause</button>
+            <button id="fullScreen" tabindex="0">Full Screen</button>
+
+            <label for="qualitySelector">Quality:</label>
+            <select id="qualitySelector">
+                <option value="720p" data-src="video-720p.mp4">720p</option>
+                <option value="480p" data-src="video-480p.mp4">480p</option>
+            </select>
+
+            <label for="audioSelector">Audio:</label>
+            <select id="audioSelector">
+                <option value="audio-en.mp3">English</option>
+                <option value="audio-fr.mp3">French</option>
+            </select>
+
+            <label for="playbackSpeed">Speed:</label>
+            <select id="playbackSpeed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+
+            <label for="volumeControl">Volume:</label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+
+            <button id="toggleSubtitles">Toggle Subtitles</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
